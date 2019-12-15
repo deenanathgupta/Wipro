@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wipro</string>
+    <string name="error_message">Something went wrong at our end!</string>
+
+</resources>

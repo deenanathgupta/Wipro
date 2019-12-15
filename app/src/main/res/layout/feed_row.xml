@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.wipro.model.Row" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            tools:text="assassasasas" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            tools:layout_editor_absoluteX="411dp" />
+
+        <ImageView
+            android:id="@+id/ivCoverImage"
+            android:layout_width="@dimen/size_80dp"
+            android:layout_height="@dimen/size_80dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/barrier4"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toEndOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            app:srcCompat="@drawable/dummy" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCoverImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
